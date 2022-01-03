@@ -1,0 +1,17 @@
+----------------------- branch_2----------------------------
+
+mutation{
+  createEvent(eventInput:{title:"A test",description:"Does it words",price:78.90,date:"2021-03-15"})
+  {
+    title
+    description
+  }
+}
+
+query{
+  events {
+    _id
+    title
+    date
+  }
+}
