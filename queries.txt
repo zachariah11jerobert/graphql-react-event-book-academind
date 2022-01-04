@@ -24,3 +24,44 @@ mutation {
     password
   }
 }
+
+mutation{
+  createEvent(eventInput:{title:"A test",description:"Does it words",price:78.90,date:"2022-01-04T00:15:22.468Z"})
+  {
+    title
+    description
+  }
+}
+
+mutation {
+  createEvent(eventInput: {title: "A test", description: "Does it words", price: 78.90, date: "2022-01-04T00:15:22.468Z"}) {
+    creator {
+      email
+    }
+  }
+}
+
+
+query{
+  events {
+    title
+    creator {
+      email
+    }
+  }
+}
+
+query{
+  events{
+    creator{
+      email
+      createdEvents{
+        title
+        creator{
+          email
+        }
+      }
+    }
+  }
+}
+
