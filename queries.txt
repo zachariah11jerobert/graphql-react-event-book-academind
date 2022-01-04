@@ -65,3 +65,17 @@ query{
   }
 }
 
+query{
+  events{
+    title
+    date
+    creator{
+      email
+      createdEvents{
+        title
+      }
+    }
+  }
+}
+
+
