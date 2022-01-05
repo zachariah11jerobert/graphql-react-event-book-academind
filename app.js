@@ -20,7 +20,7 @@ app.use(
 );
 
 mongoose
-  .connect("mongodb://localhost:27017/graphql-academind")
+  .connect("mongodb://localhost:27017/graphql-academind",{ useNewUrlParser: true })
   .then(() => {
     app.listen(3000);
   })

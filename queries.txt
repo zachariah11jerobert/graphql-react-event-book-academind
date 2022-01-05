@@ -78,4 +78,25 @@ query{
   }
 }
 
+---------------------------------------------- branch_5 -------------------------------------------
+
+mutation {
+  bookEvent(eventId: "61d3af2707780014a491b38d") {
+    _id
+    createdAt
+    user {
+      password
+    }
+  }
+}
+
+mutation {
+  cancelBooking(bookingId: "61d4fd4f1f72f82cec5fc06d") {
+    title
+    creator {
+      email
+    }
+  }
+}
+
 
